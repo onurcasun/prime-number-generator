@@ -19,8 +19,11 @@ public class PrimeNumberGenerator {
 			initializeArrays(sizeOfArray);
 			crossOutMultipleNumbers(sizeOfArray);
 			putUncrossedIntegersIntoPrimNumbers();
+		}else{
+			primeNumbers = null;
 		}
-		return primeNumbers = null;
+
+		return primeNumbers;
 	}
 
 	private static void initializeArrays(int sizeOfArray) {
