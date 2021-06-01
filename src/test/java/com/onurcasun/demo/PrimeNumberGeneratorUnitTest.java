@@ -1,6 +1,7 @@
 package com.onurcasun.demo;
 
 import static org.junit.jupiter.api.Assertions.assertArrayEquals;
+import static org.junit.jupiter.api.Assertions.assertNull;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Value;
@@ -43,5 +44,11 @@ class PrimeNumberGeneratorUnitTest {
 	void primeNumberGenerationTest4() {		
 		int[] primeNumbersActual = PrimeNumberGenerator.GetPrimeNumbers(1000);
 		assertArrayEquals(primeNumbers4, primeNumbersActual);
+	}
+
+	@Test
+	void primeNumberGenerationTestForBadInputValue() {		
+		int[] primeNumbersActual = PrimeNumberGenerator.GetPrimeNumbers(0);
+		assertNull(primeNumbersActual);
 	}
 }
