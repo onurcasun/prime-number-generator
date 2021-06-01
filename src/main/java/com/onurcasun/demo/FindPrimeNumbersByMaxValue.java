@@ -1,19 +1,17 @@
 package com.onurcasun.demo;
 
 import java.util.Scanner;
-
+import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
 public class FindPrimeNumbersByMaxValue {
-
 	public static void main(String[] args) {
-
+		SpringApplication.run(FindPrimeNumbersByMaxValue.class, args);
 		System.out.println("Enter a maximum value to list prime numbers");
 		int maxValue = readInputFromConsole();
 		int[] primeNumbers = PrimeNumberGenerator.GetPrimeNumbers(maxValue);
 		writeResultToConsole(primeNumbers);
-
 	}
 
 	private static void writeResultToConsole(int[] primeNumbers) {

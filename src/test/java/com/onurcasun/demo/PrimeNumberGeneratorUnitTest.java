@@ -3,31 +3,45 @@ package com.onurcasun.demo;
 import static org.junit.jupiter.api.Assertions.assertArrayEquals;
 
 import org.junit.jupiter.api.Test;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
 class PrimeNumberGeneratorUnitTest {
 	
+	@Value("${primeNumbers1}")
+	private int[] primeNumbers1;
+
+	@Value("${primeNumbers2}")
+	private int[] primeNumbers2;
+
+	@Value("${primeNumbers3}")
+	private int[] primeNumbers3;
+
+	@Value("${primeNumbers4}")
+	private int[] primeNumbers4;
+
 	@Test
-	void primeNumberGenerationTest1() {
-		// System.out.println(primeNumbers1);
-		int[] primeNumbersExpected = new int[] { 2, 3, 5, 7, 11 };
+	void primeNumberGenerationTest1() {		
 		int[] primeNumbersActual = PrimeNumberGenerator.GetPrimeNumbers(11);
-		assertArrayEquals(primeNumbersExpected, primeNumbersActual);
+		assertArrayEquals(primeNumbers1, primeNumbersActual);
 	}
 
 	@Test
-	void primeNumberGenerationTest2() {
-		int[] primeNumbersExpected = new int[] { 2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47 };
-		int[] primeNumbersActual = PrimeNumberGenerator.GetPrimeNumbers(47);
-		assertArrayEquals(primeNumbersExpected, primeNumbersActual);
+	void primeNumberGenerationTest2() {				
+		int[] primeNumbersActual = PrimeNumberGenerator.GetPrimeNumbers(50);
+		assertArrayEquals(primeNumbers2, primeNumbersActual);
 	}
 
 	@Test
-	void primeNumberGenerationTest3() {
-		int[] primeNumbersExpected = new int[] { 2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59, 61, 67,
-				71, 73, 79, 83, 89, 97 };
+	void primeNumberGenerationTest3() {		
 		int[] primeNumbersActual = PrimeNumberGenerator.GetPrimeNumbers(100);
-		assertArrayEquals(primeNumbersExpected, primeNumbersActual);
+		assertArrayEquals(primeNumbers3, primeNumbersActual);
+	}
+
+	@Test
+	void primeNumberGenerationTest4() {		
+		int[] primeNumbersActual = PrimeNumberGenerator.GetPrimeNumbers(1000);
+		assertArrayEquals(primeNumbers4, primeNumbersActual);
 	}
 }
