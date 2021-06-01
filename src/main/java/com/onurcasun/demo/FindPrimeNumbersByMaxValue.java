@@ -23,7 +23,7 @@ public class FindPrimeNumbersByMaxValue {
 	}
 
 	private static void writeResultToConsole(int[] primeNumbers) {
-		if (primeNumbers != null) {
+		if (primeNumbers.length > 0) {
 			System.out.println("***Prime numbers***");
 			for (int i : primeNumbers) {
 				System.out.println(i);

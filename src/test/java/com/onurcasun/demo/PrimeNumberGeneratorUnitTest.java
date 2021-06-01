@@ -49,6 +49,6 @@ class PrimeNumberGeneratorUnitTest {
 	@Test
 	void primeNumberGenerationTestForBadInputValue() {		
 		int[] primeNumbersActual = PrimeNumberGenerator.ByMaxValue(0);
-		assertNull(primeNumbersActual);
+		assertArrayEquals(new int[0], primeNumbersActual);
 	}
 }

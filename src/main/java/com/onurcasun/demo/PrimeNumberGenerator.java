@@ -20,7 +20,7 @@ public class PrimeNumberGenerator {
 			markNonPrimeNumbersUpTo(sizeOfArray);
 			putUnMarkedNumbersIntoPrimeNumbersArray();
 		} else {
-			primeNumbers = null;
+			primeNumbers = new int[0];
 		}
 
 		return primeNumbers;
