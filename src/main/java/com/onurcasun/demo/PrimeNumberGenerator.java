@@ -20,7 +20,7 @@ public class PrimeNumberGenerator {
 			crossOutMultipleNumbers(sizeOfArray);
 			putUncrossedIntegersIntoPrimNumbers();
 		}
-		return primeNumbers;
+		return primeNumbers = null;
 	}
 
 	private static void initializeArrays(int sizeOfArray) {
