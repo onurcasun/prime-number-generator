@@ -31,8 +31,23 @@ public class PrimeNumberGenerator {
 		for (int i = 0; i < sizeOfArray; i++) {
 			crossedOut[i] = false;
 		}
+		
 		// we know that 0 and 1 is not prime. so we can cross out
 		crossedOut[0] = crossedOut[1] = true;
+	}
+
+	private static void markNonPrimeNumbersUpTo(int sizeOfArray) {
+		// look up to square root of sizeOfArray + 1.
+		for (int i = 2; i < Math.sqrt(sizeOfArray) + 1; i++) {
+			if (!crossedOut[i]) {
+				// we can start with square of i and continue to cross out in multiples of i.
+				// because at this step smallest uncrossed value should be equal or greater than
+				// square of i.
+				for (int j = i * i; j < sizeOfArray; j += i) {
+					crossedOut[j] = true;
+				}
+			}
+		}
 	}
 
 	private static void putUnMarkedNumbersIntoPrimeNumbersArray() {
@@ -51,17 +66,5 @@ public class PrimeNumberGenerator {
 		}
 	}
 
-	private static void markNonPrimeNumbersUpTo(int sizeOfArray) {
-		// look up to square root of sizeOfArray + 1.
-		for (int i = 2; i < Math.sqrt(sizeOfArray) + 1; i++) {
-			if (!crossedOut[i]) {
-				// we can start with square of i and continue to cross out in multiples of i.
-				// because at this step smallest uncrossed value should be equal or greater than
-				// square of i.
-				for (int j = i * i; j < sizeOfArray; j += i) {
-					crossedOut[j] = true;
-				}
-			}
-		}
-	}
+	
 }
