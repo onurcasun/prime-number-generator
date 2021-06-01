@@ -13,7 +13,7 @@ public class PrimeNumberGenerator {
 	 * @return If max value greater than 1 returns prime number array, else returns
 	 *         null.
 	 */
-	public static int[] ByMaxNumber(int maxValue) {
+	public static int[] ByMaxValue(int maxValue) {
 		if (maxValue > 1) {
 			int sizeOfArray = maxValue + 1;
 			initializeArraysUpTo(sizeOfArray);
