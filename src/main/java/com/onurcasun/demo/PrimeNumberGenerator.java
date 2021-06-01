@@ -16,7 +16,7 @@ public class PrimeNumberGenerator {
 	public static int[] GetPrimeNumbers(int maxValue) {
 		if (maxValue > 1) {
 			int sizeOfArray = maxValue + 1;
-			initializeArraysWithValuesUpTo(sizeOfArray);
+			initializeArraysUpTo(sizeOfArray);
 			markNonPrimeNumbersUpTo(sizeOfArray);
 			putUnMarkedNumbersIntoPrimeNumbersArray();
 		} else {
@@ -26,7 +26,7 @@ public class PrimeNumberGenerator {
 		return primeNumbers;
 	}
 
-	private static void initializeArraysWithValuesUpTo(int sizeOfArray) {
+	private static void initializeArraysUpTo(int sizeOfArray) {
 		crossedOut = new boolean[sizeOfArray];
 		for (int i = 0; i < sizeOfArray; i++) {
 			crossedOut[i] = false;
