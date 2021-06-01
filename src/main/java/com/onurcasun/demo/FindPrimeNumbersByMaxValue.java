@@ -11,7 +11,7 @@ public class FindPrimeNumbersByMaxValue {
 		SpringApplication.run(FindPrimeNumbersByMaxValue.class, args);
 		System.out.println("Enter a maximum value to list prime numbers");
 		int maxValue = readInputFromConsole();
-		int[] primeNumbers = PrimeNumberGenerator.GetPrimeNumbers(maxValue);
+		int[] primeNumbers = PrimeNumberGenerator.ByMaxNumber(maxValue);		
 		writeResultToConsole(primeNumbers);
 	}
 

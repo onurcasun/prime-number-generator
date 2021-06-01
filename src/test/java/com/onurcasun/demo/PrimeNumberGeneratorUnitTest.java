@@ -24,31 +24,31 @@ class PrimeNumberGeneratorUnitTest {
 
 	@Test
 	void primeNumberGenerationTest1() {		
-		int[] primeNumbersActual = PrimeNumberGenerator.GetPrimeNumbers(11);
+		int[] primeNumbersActual = PrimeNumberGenerator.ByMaxNumber(11);
 		assertArrayEquals(primeNumbers1, primeNumbersActual);
 	}
 
 	@Test
 	void primeNumberGenerationTest2() {				
-		int[] primeNumbersActual = PrimeNumberGenerator.GetPrimeNumbers(50);
+		int[] primeNumbersActual = PrimeNumberGenerator.ByMaxNumber(50);
 		assertArrayEquals(primeNumbers2, primeNumbersActual);
 	}
 
 	@Test
 	void primeNumberGenerationTest3() {		
-		int[] primeNumbersActual = PrimeNumberGenerator.GetPrimeNumbers(100);
+		int[] primeNumbersActual = PrimeNumberGenerator.ByMaxNumber(100);
 		assertArrayEquals(primeNumbers3, primeNumbersActual);
 	}
 
 	@Test
 	void primeNumberGenerationTest4() {		
-		int[] primeNumbersActual = PrimeNumberGenerator.GetPrimeNumbers(1000);
+		int[] primeNumbersActual = PrimeNumberGenerator.ByMaxNumber(1000);
 		assertArrayEquals(primeNumbers4, primeNumbersActual);
 	}
 
 	@Test
 	void primeNumberGenerationTestForBadInputValue() {		
-		int[] primeNumbersActual = PrimeNumberGenerator.GetPrimeNumbers(0);
+		int[] primeNumbersActual = PrimeNumberGenerator.ByMaxNumber(0);
 		assertNull(primeNumbersActual);
 	}
 }
