@@ -2,6 +2,9 @@ package com.onurcasun.demo;
 
 public class PrimeNumberGenerator {
 
+	private PrimeNumberGenerator() {
+		throw new IllegalStateException();
+	}
 	private static int[] primeNumbers;
 	private static boolean[] crossedOut;
 
