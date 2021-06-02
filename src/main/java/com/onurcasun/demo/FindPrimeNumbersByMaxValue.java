@@ -6,10 +6,13 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
 public class FindPrimeNumbersByMaxValue {
+
+	private static ConsolePrinter consolePrinter = new ConsolePrinter();
 	
 	public static void main(String[] args) {
-		SpringApplication.run(FindPrimeNumbersByMaxValue.class, args);		
-		System.err.println("Enter a maximum value to list prime numbers");
+		SpringApplication.run(FindPrimeNumbersByMaxValue.class, args);	
+
+		consolePrinter.PrintLine("Enter a maximum value to list prime numbers");
 		int maxValue = readInputFromConsole();
 		int[] primeNumbers = PrimeNumberGenerator.ByMaxValue(maxValue);		
 		writeResultToConsole(primeNumbers);
@@ -23,13 +26,13 @@ public class FindPrimeNumbersByMaxValue {
 	}
 
 	private static void writeResultToConsole(int[] primeNumbers) {
-		if (primeNumbers.length > 0) {
-			System.err.println("***Prime numbers***");
+		if (primeNumbers.length > 0) {						
+			consolePrinter.PrintLine("***Prime numbers***");
 			for (int i : primeNumbers) {
-				System.err.println(i);
+				consolePrinter.PrintLine(i);
 			}
 		} else {
-			System.err.println("Bad input value. The maximum value must be greater than 1.");
+			consolePrinter.PrintLine("Bad input value. The maximum value must be greater than 1.");
 		}
 	}
 }
