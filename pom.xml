@@ -18,6 +18,7 @@
 		<sonar.projectKey>onurcasun_prime-number-generator</sonar.projectKey>
 		<sonar.organization>onurcasun</sonar.organization>
 		<sonar.host.url>https://sonarcloud.io</sonar.host.url>
+		<sonar.coverage.exclusions>**/src/main/java/**/*</sonar.coverage.exclusions>
 	</properties>
 	<dependencies>
 		<dependency>

@@ -12,9 +12,9 @@ public class FindPrimeNumbersByMaxValue {
 	public static void main(String[] args) {
 		SpringApplication.run(FindPrimeNumbersByMaxValue.class, args);	
 
-		consolePrinter.printLine("Enter a maximum value to list prime numbers");
+		consolePrinter.PrintLine("Enter a maximum value to list prime numbers");
 		int maxValue = readInputFromConsole();
-		int[] primeNumbers = PrimeNumberGenerator.byMaxValue(maxValue);		
+		int[] primeNumbers = PrimeNumberGenerator.ByMaxValue(maxValue);		
 		writeResultToConsole(primeNumbers);
 	}
 
@@ -27,12 +27,12 @@ public class FindPrimeNumbersByMaxValue {
 
 	private static void writeResultToConsole(int[] primeNumbers) {
 		if (primeNumbers.length > 0) {						
-			consolePrinter.printLine("***Prime numbers***");
+			consolePrinter.PrintLine("***Prime numbers***");
 			for (int i : primeNumbers) {
-				consolePrinter.printLine(i);
+				consolePrinter.PrintLine(i);
 			}
 		} else {
-			consolePrinter.printLine("Bad input value. The maximum value must be greater than 1.");
+			consolePrinter.PrintLine("Bad input value. The maximum value must be greater than 1.");
 		}
 	}
 }

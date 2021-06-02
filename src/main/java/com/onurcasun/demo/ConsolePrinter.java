@@ -2,11 +2,11 @@ package com.onurcasun.demo;
 
 public class ConsolePrinter {
     
-    public void printLine(String textString){
+    public void PrintLine(String textString){
         System.out.println(textString);
     }
 
-    public void printLine(int intValue){
+    public void PrintLine(int intValue){
         System.out.println(intValue);
     }
 }
