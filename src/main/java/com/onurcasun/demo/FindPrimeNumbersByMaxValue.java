@@ -8,8 +8,8 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class FindPrimeNumbersByMaxValue {
 	
 	public static void main(String[] args) {
-		SpringApplication.run(FindPrimeNumbersByMaxValue.class, args);
-		System.out.println("Enter a maximum value to list prime numbers");
+		SpringApplication.run(FindPrimeNumbersByMaxValue.class, args);		
+		System.err.println("Enter a maximum value to list prime numbers");
 		int maxValue = readInputFromConsole();
 		int[] primeNumbers = PrimeNumberGenerator.ByMaxValue(maxValue);		
 		writeResultToConsole(primeNumbers);
@@ -24,12 +24,12 @@ public class FindPrimeNumbersByMaxValue {
 
 	private static void writeResultToConsole(int[] primeNumbers) {
 		if (primeNumbers.length > 0) {
-			System.out.println("***Prime numbers***");
+			System.err.println("***Prime numbers***");
 			for (int i : primeNumbers) {
-				System.out.println(i);
+				System.err.println(i);
 			}
 		} else {
-			System.out.println("Bad input value. The maximum value must be greater than 1.");
+			System.err.println("Bad input value. The maximum value must be greater than 1.");
 		}
 	}
 }
